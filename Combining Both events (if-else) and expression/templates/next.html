@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">----------------------------------------------</h1>
+    <h1 style="text-align: center;">This is jinja template practice</h1>
+    <h1 style="text-align: center;">----------------------------------------------</h1>
+    <h1 style="color: rgb(0, 4, 124); text-align: center;">This is NEXT PAGE</h1>
+    <h1 style="color: purple; text-align: center;">IF-ELSE Condition Check:</h1>
+    <div style="display: flex; justify-content:center">
+        {% if score>50 %}
+        <h1 style="text-align: center;">Your number is {{score}} and it is greater than 50 so, you are succesfull!</h1>
+        {% else %}
+        <h1 style="text-align: center;">Your number is {{score}} and it is less than 50 so, you fail!</h1>
+        {% endif %}
+    </div>
+    <div>
+        <h1 style="color: purple; text-align: center;">WANA GO BACK TO HOME? PRESS SUBMIT!</h1>
+        <form action="{{url_for('home')}}" method="post" style="display: flex; justify-content:center;">
+            <input type="hidden" name="english" value="{{score}}">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

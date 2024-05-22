@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">----------------------------------------------</h1>
+    <h1 style="text-align: center;">This is jinja template practice</h1>
+    <h1 style="text-align: center;">----------------------------------------------</h1>
+    <h1 style="color: purple; text-align: center;">Combining Both Events</h1>
+    <div  style="display: flex; justify-content:center">
+        <form action="{{ url_for('home') }}" method="post">
+            <input type="text" name="english" required="required">
+            <button type="submit">submit</button>
+        </form>
+    </div>
+
+    <h1 style="color: purple; text-align: center">Output Expression Testing: </h1>
+    <h1 style="text-align: center;">The number you enter here is : {{score}} </h1>
+
+    <h1 style="color: purple; text-align: center;">IF-ELSE Condition Statement Check:</h1>
+    <div style="display: flex; justify-content:center">
+        {% if score>50 %}
+        <h1 style="text-align: center;">Your number is {{score}} and this number is greater than 50</h1>
+        {% else %}
+        <h1 style="text-align: center;">Your number is {{score}} and this number is less than 50</h1>
+        {% endif %}
+    </div>
+
+    <div>
+        <h1 style="color: purple; text-align: center;">WANA CHECK OUTPUT ON NEXT PAGE? PRESS SUBMIT!</h1>
+        <form action="{{url_for('next')}}" method="post" style="display: flex; justify-content:center;">
+            <input type="hidden" name="maths" value="{{score}}">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+
+
+</body>
+</html>

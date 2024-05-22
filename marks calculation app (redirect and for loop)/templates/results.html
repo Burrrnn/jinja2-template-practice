@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Results</title>
+</head>
+<body>
+    <h1 style="text-align: center;">----------------------------------------------</h1>
+    <h1 style="text-align: center;">This is jinja template practice</h1>
+    <h1 style="text-align: center;">----------------------------------------------</h1>
+    <h1 style="color: purple; text-align: center;">For Loop Testing Results</h1>
+    <h1 style="text-align: center;">TABLE</h1>
+    <table style="display:flex; justify-content: center; align-items:center; height:100px; ">
+        {% for key,value in results.items() %}
+            <tr style="border: 3px solid black;">
+                <th style="border: 3px solid black; ">{{ key }}</th>
+                <th style="border: 3px solid black; text-align:center">{{ value }}</th>
+            </tr>
+        {% endfor %} 
+    </table>
+
+</body>
+</html>
